@@ -17,7 +17,7 @@ import Settings from "../pages/Settings";
 import PrivateRoute from "./PrivateRoute";
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([ 
     {
         path: "/",
         element: <Root></Root>,
