@@ -4,7 +4,7 @@ import useCreditRequestInfo from '../hooks/useCreditRequestInfo';
 
 const LenderDashBoard = () => {
     const {creditRequestInfo} = useCreditRequestInfo();
-    // console.log(creditRequestInfo);
+    
     const pendingCreditRequestInfo = creditRequestInfo.filter(client => client.status === "pending");
     const successCreditRequestInfo = creditRequestInfo.filter(client => client.status === "approve");
     const rejectedCreditRequestInfo = creditRequestInfo.filter(client => client.status === "reject");
@@ -19,7 +19,7 @@ const LenderDashBoard = () => {
         successClients: successCreditRequestInfo,
         rejectedClients: rejectedCreditRequestInfo
     }
-    // console.log(creditRequestInfo);
+   
     return (
         <div className='md:space-y-7 space-y-5'>
             <ClientStatus creditRequestStatus={creditRequestStatus}></ClientStatus>

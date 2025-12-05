@@ -21,7 +21,7 @@ const ResetPassword = () => {
   const handleSendOTP = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-    axiosPublic.post("/api/v1/user/forgot-password", {email})
+    axiosPublic.post("https://loan-backend-l3l3.onrender.com/user/forgot-password", {email})
       .then(response =>{
         toast.success(response?.data?.message);
         setSendOTP(true);
@@ -36,7 +36,7 @@ const ResetPassword = () => {
 const handleConfirmOTP = (e) => {
     e.preventDefault();
     const otp = otpNumber.join("");
-    axiosPublic.post("/api/v1/user/verify-otp", {email, otp})
+    axiosPublic.post("https://loan-backend-l3l3.onrender.com/user/verify-otp", {email, otp})
       .then(response =>{
         toast.success(response?.data?.message);
         setShowResetPasswordSection(true);
@@ -55,8 +55,8 @@ const handleResetPassword = (e) => {
     if(password !== confirmPassword){
       return toast.error("Enter the same password");
     }
-    // console.log(email, password);
-    axiosPublic.post("/api/v1/user/reset-password", {email, password})
+  
+    axiosPublic.post("https://loan-backend-l3l3.onrender.com/user/reset-password", {email, password})
       .then(response =>{
         toast.success(response?.data?.message);
         navigate("/sign-in");
@@ -67,7 +67,7 @@ const handleResetPassword = (e) => {
 }
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center px-5">
-      {/* send OTP form */}
+  
       <div
         className={`${
           sendOTP ? "hidden" : ""

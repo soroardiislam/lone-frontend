@@ -10,8 +10,7 @@ const CompleteProfile = () => {
   const [personalInfo, setPersonalInfo] = useState(null);
   const [contactInfo, setContactInfo] = useState(null);
   
-  // console.log(personalInfo, contactInfo);
-
+  
   const steps = [
     { id: 1, label: "Personal", component: <PersonalInfo step={step} setStep={setStep} setPersonalInfo={setPersonalInfo}/> },
     { id: 2, label: "Contact", component: <ContactInfo step={step} setStep={setStep} setContactInfo={setContactInfo}/> },
