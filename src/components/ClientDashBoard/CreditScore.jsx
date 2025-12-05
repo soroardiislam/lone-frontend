@@ -1,7 +1,7 @@
 import {Progress} from 'antd';
 
 const CreditScore = ({creditInfo, factorsAffectingScore}) => {
-    // console.log(creditInfo, factorsAffectingScore);
+    
     return (
         <div>
             <div className='bg-gray-300 p-4 flex justify-between items-center rounded-t-sm'>

@@ -18,7 +18,7 @@ const Decision = ({email}) => {
     const clientInfo = {
         loanAmount, interestRate, terms: terms ? terms : "3", notes, status, email
     }
-    // console.log(status);
+    
     axiosPublic.post('https://loan-backend-l3l3.onrender.com/creditDecision', {clientInfo})
         .then(response =>{
             toast.success(response?.data?.message);

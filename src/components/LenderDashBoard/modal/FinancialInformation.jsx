@@ -5,7 +5,7 @@ import { GoCreditCard } from "react-icons/go";
 import { MdOutlineBookOnline } from "react-icons/md";
 
 const FinancialInformation = ({ financialInfo }) => {
-  // console.log(financialInfo);
+  
   return (
     <div className="mt-3 border-b border-gray-300 pb-3">
       <h2 className="text-red-900 text-lg font-semibold">

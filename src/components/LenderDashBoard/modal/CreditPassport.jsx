@@ -6,7 +6,7 @@ import { FiUser } from "react-icons/fi";
 
 
 const CreditPassport = ({creditInfo, email}) => {
-    // console.log(creditInfo);
+    
     return (
         <div className="border-b border-gray-300 pb-3">
             <h2 className="text-red-900 text-lg font-semibold">Credit Passport</h2>

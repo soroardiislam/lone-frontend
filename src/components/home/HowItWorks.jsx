@@ -6,7 +6,7 @@ import { useAuthContext } from "../../providers/AuthProviders";
 const HowItWorks = () => {
   const {profileInfo} = useProfileInfo();
   const {user} = useAuthContext();
-  // console.log(profileInfo);
+  
   return (
     <div className="bg-gray-100 py-3 md:py-5 lg:py-7">
       <div className="my-7 md:my-12 lg:my-16 mx-5 md:mx-14 lg:mx-24">

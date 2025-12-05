@@ -8,7 +8,7 @@ import RiskAssessment from "./RiskAssessment";
 const ClientsDetailsModal = ({ actionId, setActionId }) => {
   const { creditRequestInfo } = useCreditRequestInfo();
   const client = creditRequestInfo.find((client) => client._id === actionId);
-  // console.log(client?.email);
+  
   return (
     <div className="modal-box w-11/12 max-w-5xl p-0">
       <div className="flex justify-between items-center p-3 bg-gray-100">

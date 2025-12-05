@@ -11,8 +11,6 @@ const FinancialInfo = ({step, setStep, personalInfo, contactInfo}) => {
   const {user} = useAuthContext();
   const userId = user?._id;
   const navigate = useNavigate();
-  // console.log(userId);
-  // console.log(personalInfo, contactInfo);
 
   const handleApplicationSubmit = (e) =>{
     e.preventDefault();
@@ -29,7 +27,7 @@ const FinancialInfo = ({step, setStep, personalInfo, contactInfo}) => {
     const clientInfo = {
       personalInfo, contactInfo, financialInfo
     }
-    // console.log(clientInfo);
+    
     axiosPublic.patch(`https://loan-backend-l3l3.onrender.com/profile/${userId}`, {clientInfo})
       .then(response =>{
         toast.success(response?.data?.message);
