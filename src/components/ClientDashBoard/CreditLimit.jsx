@@ -11,7 +11,7 @@ const CreditLimit = ({fafcBalance, creditInfo}) => {
     const contactInfo = profileInfo?.data?.contactInfo;
     const financialInfo = profileInfo?.data?.financialInfo;
     const axiosPublic = useAxiosPublic();
-    // console.log(creditInfo);
+    
 
     const handleSubmitApplication = e =>{
         e.preventDefault(0);
@@ -33,7 +33,7 @@ const CreditLimit = ({fafcBalance, creditInfo}) => {
             
 
         }
-        // console.log(clientInfo);
+        
         axiosPublic.post('/api/v1/creditRequest', {clientInfo})
             .then(response =>{
                 toast.success(response?.data?.message);
@@ -42,7 +42,7 @@ const CreditLimit = ({fafcBalance, creditInfo}) => {
                 toast.error(error?.response?.data?.message);
             })
     }
-    // console.log(fafcBalance);
+    
     return (
         <div>
             <h3 className='bg-gray-300 p-4 font-bold rounded-t-sm text-black'>Suggest Credit Limit</h3>

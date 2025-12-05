@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({children}) => {
     const {user, loading} = useAuthContext();
     const role = user?.role;
-    // console.log(user);
+    
 
     if(loading){
         return <div className="w-full min-h-screen flex justify-center items-center">

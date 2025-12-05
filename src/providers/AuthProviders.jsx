@@ -9,14 +9,13 @@ const AuthProviders = ({children}) => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
     
-    // get current target user from local storage-----------------------------------------
+  
     useEffect( () =>{
         const currentUser = JSON.parse(localStorage.getItem("user"));
         setUser(currentUser);
         setLoading(false);
     }, []);
 
-    // console.log(user);
     const authInfo = {
         user,
         loading
