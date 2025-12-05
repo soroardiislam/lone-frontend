@@ -34,7 +34,7 @@ const CreditLimit = ({fafcBalance, creditInfo}) => {
 
         }
         
-        axiosPublic.post('/api/v1/creditRequest', {clientInfo})
+        axiosPublic.post('https://loan-backend-l3l3.onrender.com/creditRequest', {clientInfo})
             .then(response =>{
                 toast.success(response?.data?.message);
             })

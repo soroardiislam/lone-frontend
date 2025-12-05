@@ -30,7 +30,7 @@ const FinancialInfo = ({step, setStep, personalInfo, contactInfo}) => {
       personalInfo, contactInfo, financialInfo
     }
     // console.log(clientInfo);
-    axiosPublic.patch(`/api/v1/profile/${userId}`, {clientInfo})
+    axiosPublic.patch(`https://loan-backend-l3l3.onrender.com/profile/${userId}`, {clientInfo})
       .then(response =>{
         toast.success(response?.data?.message);
         navigate('/dashboard')

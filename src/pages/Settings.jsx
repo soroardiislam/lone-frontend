@@ -36,7 +36,7 @@ const Settings = () => {
             financialInfo: ""
         }
         // console.log(profileInfo);
-        axiosPublic.patch(`/api/v1/profile/${userId}`, profileInfo)
+        axiosPublic.patch(`https://loan-backend-l3l3.onrender.com/profile/${userId}`, profileInfo)
            .then(response =>{
                 toast.success(response?.data?.message);
                 setUpdateProfile(false);

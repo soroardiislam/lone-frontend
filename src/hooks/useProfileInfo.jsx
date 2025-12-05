@@ -9,7 +9,7 @@ const useProfileInfo = () => {
     const {data: profileInfo = {}} = useQuery({
         queryKey:  [user?._id],
         queryFn: async() =>{
-            const res = await axiosPublic.get(`/api/v1/profile/${user?._id}`);
+            const res = await axiosPublic.get(`https://loan-backend-l3l3.onrender.com/profile/${user?._id}`);
             
             return res.data;
         }

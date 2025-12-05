@@ -31,7 +31,7 @@ const SignIn = () => {
       password,
       terms,
     };
-    axiosPublic.post("/api/v1/user/sign-in", { clientInfo })
+    axiosPublic.post("https://loan-backend-l3l3.onrender.com/user/sign-in", { clientInfo })
       .then(response =>{
         // console.log(response);
         localStorage.setItem("user", JSON.stringify(response?.data?.data));

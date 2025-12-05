@@ -31,7 +31,7 @@ const SignUp = () => {
             email, phone, password, terms
         }
         // console.log(clientInfo);
-        axiosPublic.post("/api/v1/user/sign-up", {clientInfo})
+        axiosPublic.post("https://loan-backend-l3l3.onrender.com/user/sign-up", {clientInfo})
             .then(response =>{
                 // console.log(response);
                 toast.success(response.data.message);

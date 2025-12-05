@@ -10,7 +10,7 @@ const useLoanStatus = () => {
     const {data = {} } = useQuery({
         queryKey: [email],
         queryFn: async() =>{
-            const res = await axiosPublic.get(`/api/v1/creditDecision/${email}`);
+            const res = await axiosPublic.get(`https://loan-backend-l3l3.onrender.com/creditDecision/${email}`);
             return res?.data?.data;
         }
     })

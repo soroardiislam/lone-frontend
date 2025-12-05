@@ -27,7 +27,7 @@ const Security = () => {
             newPassword,
             confirmNewPassword
         }
-        axiosPublic.patch("/api/v1/user/security", newUpdatedPassword)
+        axiosPublic.patch("https://loan-backend-l3l3.onrender.com/user/security", newUpdatedPassword)
             .then(response =>{
                 toast.success(response.data.message);
                 // form.reset();
